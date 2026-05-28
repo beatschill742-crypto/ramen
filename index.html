@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gajok Ramyeon | Pitch Deck Financiero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            overflow: hidden; /* Prevent scrolling, it's a presentation */
+        }
+        
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            transform: scale(0.95);
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+            z-index: 10;
+        }
+
+        /* Background glow effects */
+        .glow-pink {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(236, 72, 153, 0.15);
+            filter: blur(100px);
+            top: -100px;
+            right: -100px;
+            border-radius: 50%;
+        }
+
+        .glow-blue {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(59, 130, 246, 0.15);
+            filter: blur(100px);
+            bottom: -100px;
+            left: -100px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="h-screen w-screen relative selection:bg-pink-500/30">
+
+    <!-- Global Background Elements -->
+    <div class="glow-pink"></div>
+    <div class="glow-blue"></div>
+
+    <!-- Slide 1: Portada -->
+    <div class="slide active p-8" id="slide-0">
+        <div class="h-full flex flex-col items-center justify-center text-center max-w-5xl mx-auto space-y-8">
+            <div class="inline-block p-6 bg-gray-900/80 rounded-3xl border border-gray-700 shadow-2xl backdrop-blur-sm">
+                <h1 class="text-7xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 tracking-tighter mb-2">
+                    가족 라면
+                </h1>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mt-4">Gajok Ramyeon</h2>
+                <p class="text-pink-400 font-bold tracking-[0.3em] uppercase text-sm md:text-base mt-3">Ramen en Familia</p>
+            </div>
+            
+            <div class="mt-8">
+                <p class="text-2xl text-gray-300 font-light max-w-3xl leading-relaxed">
+                    Modelo de Autoservicio K-Market.<br>
+                    <strong class="text-white">Alta Rentabilidad. Fricción Operativa Cero.</strong>
+                </p>
+                <div class="mt-6 flex gap-4 justify-center">
+                    <span class="bg-gray-800 px-4 py-2 rounded-full text-sm text-gray-300 border border-gray-700"><i class="fa-solid fa-location-dot text-pink-500 mr-2"></i> Zona Azul, Naucalpan</span>
+                    <span class="bg-gray-800 px-4 py-2 rounded-full text-sm text-gray-300 border border-gray-700"><i class="fa-solid fa-seedling text-green-500 mr-2"></i> Ronda Semilla</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Tesis de Inversión -->
+    <div class="slide p-8 md:p-16" id="slide-1">
+        <div class="max-w-6xl mx-auto h-full flex flex-col">
+            <h2 class="text-4xl font-black mb-2 text-white">La Tesis de Inversión</h2>
+            <p class="text-xl text-gray-400 mb-10 border-b border-gray-800 pb-4">¿Por qué este modelo aplasta a un restaurante tradicional?</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 flex-grow items-center">
+                <div class="space-y-6">
+                    <div class="bg-gray-900/60 p-6 rounded-2xl border border-gray-800 border-l-4 border-l-pink-500">
+                        <h3 class="text-2xl font-bold text-white flex items-center gap-3"><i class="fa-solid fa-chart-line text-pink-500"></i> OPEX Radicamente Bajo</h3>
+                        <p class="text-gray-400 mt-2 text-lg">Sin cocineros, sin meseros. Operación gestionada por 1 solo supervisor (Host) por turno. <strong>Renta estratégica amarrada en $16,000 MXN.</strong></p>
+                    </div>
+                    <div class="bg-gray-900/60 p-6 rounded-2xl border border-gray-800 border-l-4 border-l-purple-500">
+                        <h3 class="text-2xl font-bold text-white flex items-center gap-3"><i class="fa-solid fa-microchip text-purple-500"></i> Operación Escalable (Plug & Play)</h3>
+                        <p class="text-gray-400 mt-2 text-lg">Al no requerir campanas de extracción pesadas ni gas, el despliegue es rápido, limpio y fácilmente replicable en otras zonas como franquicia.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-3xl border border-gray-700 shadow-2xl flex flex-col justify-center text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-50"></div>
+                    <h3 class="text-2xl font-black text-white mb-6 z-10 uppercase tracking-widest">Punto de Equilibrio</h3>
+                    <div class="z-10">
+                        <p class="text-gray-400 mb-1">Costos Fijos Mensuales (Renta + Nómina + Servicios)</p>
+                        <p class="text-5xl font-black text-red-400 mb-8 font-mono">$30,000</p>
+                        
+                        <p class="text-gray-400 mb-1">Clientes diarios para <strong class="text-white">no perder dinero</strong></p>
+                        <p class="text-7xl font-black text-green-400 drop-shadow-[0_0_15px_rgba(74,222,128,0.3)]">
+                            18 <span class="text-2xl text-green-500/70 font-light block mt-2">clientes/día</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Automatización y Blindaje -->
+    <div class="slide p-8 md:p-16" id="slide-2">
+        <div class="max-w-6xl mx-auto h-full flex flex-col">
+            <h2 class="text-4xl font-black mb-2 text-white">Blindaje Financiero y Anti-Robo</h2>
+            <p class="text-xl text-gray-400 mb-10 border-b border-gray-800 pb-4">Auditoría perfecta. Cero efectivo. Cero puntos ciegos.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-grow">
+                <div class="bg-gray-900/40 p-6 rounded-2xl border border-gray-800 flex gap-5">
+                    <div class="w-14 h-14 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-mobile-screen-button text-2xl text-blue-400"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">100% Pagos Digitales</h4>
+                        <p class="text-gray-400">Al no haber caja registradora con billetes, eliminamos el "cambio mal dado" y el robo interno. Los ingresos van directo a la cuenta bancaria fiscalizada.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/40 p-6 rounded-2xl border border-gray-800 flex gap-5">
+                    <div class="w-14 h-14 rounded-full bg-pink-500/20 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-server text-2xl text-pink-400"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">Inventario en la Nube</h4>
+                        <p class="text-gray-400">El cliente escanea el código de barras en el iPad. Cada ramen o dulce vendido se descuenta del inventario en tiempo real. El descuadre es matemáticamente imposible.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/40 p-6 rounded-2xl border border-gray-800 flex gap-5">
+                    <div class="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-eye text-2xl text-purple-400"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">El "Host" Guardián</h4>
+                        <p class="text-gray-400">El único empleado no está distraído cocinando; está de pie en la sala, asistiendo y observando todo. El local contará con CCTV 360° accesible remoto para los socios.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/40 p-6 rounded-2xl border border-gray-800 flex gap-5">
+                    <div class="w-14 h-14 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-lock text-2xl text-green-400"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">Bodega Restringida</h4>
+                        <p class="text-gray-400">El almacén principal está bajo llave. Solo se exhibe el stock necesario para el turno. El sistema avisa cuándo resurtir basándose en métricas exactas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Unit Economics -->
+    <div class="slide p-8 md:p-16" id="slide-3">
+        <div class="max-w-6xl mx-auto h-full flex flex-col">
+            <h2 class="text-4xl font-black mb-2 text-white">Unit Economics: La Estrategia de Venta</h2>
+            <p class="text-xl text-gray-400 mb-8 border-b border-gray-800 pb-4">El ramen es el gancho; las bebidas y los snacks son la utilidad.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 flex-grow">
+                <!-- Producto Gancho -->
+                <div class="bg-gray-900 border border-gray-700 p-6 rounded-2xl flex flex-col relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs font-bold px-4 py-1 rounded-full">Paso 1: Atracción</div>
+                    <h3 class="text-2xl font-bold text-center mt-4 mb-1">Ramen Coreano</h3>
+                    <p class="text-center text-gray-400 text-sm mb-6">Tráfico orgánico por precio.</p>
+                    
+                    <div class="space-y-3 mt-auto font-mono text-lg">
+                        <div class="flex justify-between border-b border-gray-800 pb-2">
+                            <span class="text-red-400">Costo</span> <span class="text-white">$35</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-800 pb-2">
+                            <span class="text-green-400">Venta</span> <span class="text-white">$50</span>
+                        </div>
+                        <div class="flex justify-between font-bold pt-2">
+                            <span class="text-gray-400">Margen</span> <span class="text-white">+$15</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upsell -->
+                <div class="bg-gray-800 border-2 border-dashed border-purple-500/50 p-6 rounded-2xl flex flex-col relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-bold px-4 py-1 rounded-full">Paso 2: Upsell (K-Market)</div>
+                    <h3 class="text-2xl font-bold text-center mt-4 mb-1">Bebida + Toppings</h3>
+                    <p class="text-center text-gray-400 text-sm mb-6">Refrescos importados, huevo, queso, dulces.</p>
+                    
+                    <div class="space-y-3 mt-auto font-mono text-lg">
+                        <div class="flex justify-between border-b border-gray-700 pb-2">
+                            <span class="text-red-400">Costo</span> <span class="text-white">$20</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-700 pb-2">
+                            <span class="text-green-400">Venta</span> <span class="text-white">$60</span>
+                        </div>
+                        <div class="flex justify-between font-bold pt-2">
+                            <span class="text-gray-400">Margen</span> <span class="text-purple-400">+$40</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ticket Total -->
+                <div class="bg-gradient-to-b from-gray-800 to-gray-900 border border-green-500 p-6 rounded-2xl flex flex-col relative shadow-[0_0_30px_rgba(74,222,128,0.15)]">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs font-bold px-4 py-1 rounded-full">Resultado: Ticket Promedio</div>
+                    <h3 class="text-2xl font-bold text-center mt-4 mb-1">Ingreso por Cliente</h3>
+                    <p class="text-center text-gray-400 text-sm mb-4">Lo que gasta 1 persona en 1 visita.</p>
+                    
+                    <div class="flex-grow flex items-center justify-center">
+                        <span class="text-6xl font-black text-white font-mono">$110</span>
+                    </div>
+                    
+                    <div class="mt-auto border-t border-gray-700 pt-4 flex justify-between items-center font-mono">
+                        <span class="text-gray-400 text-sm">MARGEN BRUTO</span>
+                        <span class="text-green-400 font-bold text-2xl">+$55 <span class="text-sm">(50%)</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Proyección y CAPEX -->
+    <div class="slide p-8 md:p-16" id="slide-4">
+        <div class="max-w-6xl mx-auto h-full flex flex-col">
+            <h2 class="text-4xl font-black mb-2 text-white">Despliegue de Capital (CAPEX)</h2>
+            <p class="text-xl text-gray-400 mb-8 border-b border-gray-800 pb-4">La oferta para los inversionistas fundadores.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 flex-grow">
+                <div>
+                    <div class="bg-gray-900/80 p-8 rounded-3xl border border-gray-700 mb-6">
+                        <h3 class="text-gray-400 text-sm font-bold uppercase tracking-widest mb-2">Solicitud de Inversión Semilla</h3>
+                        <p class="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-500 font-mono">
+                            $400,000 <span class="text-2xl text-gray-500">MXN</span>
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden">
+                        <table class="w-full text-left text-sm font-mono">
+                            <thead class="bg-gray-800 text-gray-400">
+                                <tr>
+                                    <th class="p-4">Concepto</th>
+                                    <th class="p-4 text-right">Monto Estimado</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-800 text-gray-300">
+                                <tr>
+                                    <td class="p-4"><i class="fa-solid fa-shop text-pink-500 w-6"></i> Adecuación (Diseño/Neón/Barras)</td>
+                                    <td class="p-4 text-right font-bold text-white">$140,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4"><i class="fa-solid fa-tablet-screen-button text-blue-500 w-6"></i> Tech (iPads, Kioscos, Inducción)</td>
+                                    <td class="p-4 text-right font-bold text-white">$80,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4"><i class="fa-solid fa-boxes-stacked text-purple-500 w-6"></i> Inventario Inicial y Empaques</td>
+                                    <td class="p-4 text-right font-bold text-white">$60,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4"><i class="fa-solid fa-file-contract text-green-500 w-6"></i> Local (Depósito y Trámites)</td>
+                                    <td class="p-4 text-right font-bold text-white">$60,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4"><i class="fa-solid fa-vault text-yellow-500 w-6"></i> Flujo de Caja / Reserva Operativa</td>
+                                    <td class="p-4 text-right font-bold text-white">$60,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center space-y-6">
+                    <div class="bg-gray-800/50 p-6 rounded-2xl border border-gray-700">
+                        <h4 class="text-xl font-bold text-white mb-4 border-b border-gray-600 pb-2">Proyección Financiera (Mensual)</h4>
+                        <p class="text-sm text-gray-400 mb-4">Basado en un escenario realista de <strong>60 clientes/día</strong> con ticket de $110.</p>
+                        
+                        <div class="space-y-3 font-mono">
+                            <div class="flex justify-between text-gray-300">
+                                <span>Ventas Mensuales (Ingreso)</span> <span>$198,000</span>
+                            </div>
+                            <div class="flex justify-between text-red-400">
+                                <span>Costo de Ventas (COGS)</span> <span>-$99,000</span>
+                            </div>
+                            <div class="flex justify-between text-red-400 border-b border-gray-600 pb-3">
+                                <span>OPEX (Renta, Sueldo, Serv.)</span> <span>-$30,000</span>
+                            </div>
+                            <div class="flex justify-between text-xl font-bold pt-2 text-green-400">
+                                <span>Utilidad Neta (EBITDA)</span> <span>$69,000 MXN</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-pink-600/20 to-purple-600/20 border border-pink-500/30 p-6 rounded-2xl text-center">
+                        <h4 class="font-bold text-white text-lg mb-1">Recuperación de Inversión (ROI)</h4>
+                        <p class="text-3xl font-black text-pink-400">5.7 Meses</p>
+                        <p class="text-xs text-gray-400 mt-2">Transparencia Total: Acceso 24/7 al sistema de ventas para todos los socios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controles de Navegación -->
+    <div class="fixed bottom-0 left-0 w-full p-6 flex justify-between items-center z-50 pointer-events-none">
+        <button onclick="prevSlide()" class="pointer-events-auto bg-gray-900/80 hover:bg-gray-800 text-white w-12 h-12 rounded-full border border-gray-700 flex items-center justify-center transition-transform hover:scale-110 shadow-lg" id="btn-prev">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        
+        <div class="flex space-x-2 pointer-events-auto" id="dots-container">
+            <!-- Dots will be generated by JS -->
+        </div>
+
+        <button onclick="nextSlide()" class="pointer-events-auto bg-white hover:bg-gray-200 text-black w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center transition-transform hover:scale-110 shadow-lg shadow-white/10" id="btn-next">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <script>
+        const totalSlides = 5;
+        let currentSlide = 0;
+
+        function updateUI() {
+            // Update Slides
+            for (let i = 0; i < totalSlides; i++) {
+                const slide = document.getElementById(`slide-${i}`);
+                if (i === currentSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            }
+
+            // Update Dots
+            const dotsContainer = document.getElementById('dots-container');
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.className = `h-2 rounded-full transition-all duration-300 ${i === currentSlide ? 'w-8 bg-pink-500' : 'w-2 bg-gray-600'}`;
+                dotsContainer.appendChild(dot);
+            }
+
+            // Update Buttons
+            document.getElementById('btn-prev').style.opacity = currentSlide === 0 ? '0.3' : '1';
+            document.getElementById('btn-prev').style.cursor = currentSlide === 0 ? 'not-allowed' : 'pointer';
+            
+            document.getElementById('btn-next').style.opacity = currentSlide === totalSlides - 1 ? '0.3' : '1';
+            document.getElementById('btn-next').style.cursor = currentSlide === totalSlides - 1 ? 'not-allowed' : 'pointer';
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateUI();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateUI();
+            }
+        }
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'Space') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+
+        // Initialize UI
+        updateUI();
+    </script>
+</body>
+</html>
